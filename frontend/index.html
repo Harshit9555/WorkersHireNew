@@ -4,197 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WorkersHire - Hire Skilled Workers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    
-
-    
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f4f4f4;
-        }
-        .hero {
-            background: url('../images/bg1.png') no-repeat center center/cover;
-            height: 85vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
-            position: relative;
-        }
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-        }
-        .hero .container {
-            position: relative;
-            z-index: 2;
-        }
-        .about-section, .services-section {
-            padding: 80px 0;
-            text-align: center;
-            border-radius: 20px;
-            margin: 40px auto;
-            width: 90%;
-            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
-        }
-        .about-section {
-            background: linear-gradient(to right, #007bff, #6610f2);
-            color: white;
-        }
-        .services-section {
-            background: #fff;
-        }
-        .services-section button {
-            font-size: 1.5rem;
-            padding: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="style1.css">
 </head>
 <body>
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
-    <div class="container">
-        <a class="navbar-brand" href="#"><h2>WorkersHire</h2></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                
-                <!-- ✅ Link to login.html -->
-                <li class="nav-item">
-                    <a class="nav-link" href="login.html">Get Started</a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark shadow">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><h2>WorkersHire</h2></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item ms-2">
+                        <a class="nav-link btn-nav-cta" href="login.html">Get Started</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<header class="hero text-center">
-    <div class="container">
-        <h1>Welcome to WorkersHire</h1>
-        <p>Your one-stop platform for hiring skilled workers easily and efficiently.</p>
+    <header class="hero text-center" style="background: url('../images/bg1.png') no-repeat center center/cover;">
+        <div class="container">
+            <h1 class="animate-fade-down">Welcome to WorkersHire</h1>
+            <p class="animate-fade-up delay-2">Your one-stop platform for hiring skilled workers easily and efficiently.</p>
+            <a href="login.html" class="btn btn-light btn-lg mt-3 animate-scale delay-4">Get Started</a>
+        </div>
+    </header>
 
-        <!-- ✅ Add direct link to login.html -->
-        <a href="login.html" class="btn btn-light btn-lg mt-3">Get Started</a>
-    </div>
-</header>
-
-    
-    
-
-    <section id="about" class="about-section">
+    <section id="about" class="about-section reveal">
         <div class="container">
             <h2>About WorkersHire</h2>
             <p>WorkersHire is a platform dedicated to connecting skilled workers with individuals and businesses in need of reliable services.</p>
-            <p>We understand the challenges of finding trusted professionals for tasks like home improvement, repairs, and specialized labor. That’s why we’ve built an easy-to-use platform where you can hire workers effortlessly.</p>
+            <p>We understand the challenges of finding trusted professionals for tasks like home improvement, repairs, and specialized labor. That's why we've built an easy-to-use platform where you can hire workers effortlessly.</p>
             <p><strong>Why Choose WorkersHire?</strong></p>
-            <ul class="list-group list-group-flush">
+            <ul class="list-group list-group-flush mx-auto" style="max-width:500px;">
                 <li class="list-group-item">✔ Wide range of skilled professionals available</li>
                 <li class="list-group-item">✔ Verified workers with customer ratings</li>
                 <li class="list-group-item">✔ Easy booking and secure payments</li>
                 <li class="list-group-item">✔ 24/7 customer support</li>
                 <li class="list-group-item">✔ Affordable and transparent pricing</li>
             </ul>
-            <p>Whether you need a painter, electrician, plumber, or a driver, WorkersHire is here to make hiring simple and stress-free.</p>
+            <p class="mt-3">Whether you need a painter, electrician, plumber, or a driver, WorkersHire is here to make hiring simple and stress-free.</p>
         </div>
     </section>
-    
 
-    <section id="services" class="services-section">
+    <section id="services" class="services-section reveal">
         <div class="container">
-            <h2 class="mb-4">Our Services</h2>
+            <h2 class="mb-2">Our Services</h2>
+            <p class="section-subtitle">Click a service to learn more and book a professional</p>
             <div class="row">
-                <div class="col-md-4 mb-4"><button class="btn btn-primary w-100" onclick="showServiceDetails('Painter')">Painter</button></div>
-                <div class="col-md-4 mb-4"><button class="btn btn-primary w-100" onclick="showServiceDetails('Carpenter')">Carpenter</button></div>
-                <div class="col-md-4 mb-4"><button class="btn btn-primary w-100" onclick="showServiceDetails('Electrician')">Electrician</button></div>
-                <div class="col-md-4 mb-4"><button class="btn btn-primary w-100" onclick="showServiceDetails('Plumber')">Plumber</button></div>
-                <div class="col-md-4 mb-4"><button class="btn btn-primary w-100" onclick="showServiceDetails('Mason')">Mason</button></div>
-                <div class="col-md-4 mb-4"><button class="btn btn-primary w-100" onclick="showServiceDetails('Housekeeper')">Housekeeper</button></div>
-                <div class="col-md-4 mb-4"><button class="btn btn-primary w-100" onclick="showServiceDetails('Cook')">Cook</button></div>
-                <div class="col-md-4 mb-4"><button class="btn btn-primary w-100" onclick="showServiceDetails('Agricultural Labour')">Agricultural Labour</button></div>
-                <div class="col-md-4 mb-4"><button class="btn btn-primary w-100" onclick="showServiceDetails('Driver')">Driver</button></div>
+                <div class="col-md-4 mb-4 reveal delay-1"><button class="btn btn-primary w-100" onclick="showServiceDetails('Painter')">🎨 Painter</button></div>
+                <div class="col-md-4 mb-4 reveal delay-2"><button class="btn btn-primary w-100" onclick="showServiceDetails('Carpenter')">🪚 Carpenter</button></div>
+                <div class="col-md-4 mb-4 reveal delay-3"><button class="btn btn-primary w-100" onclick="showServiceDetails('Electrician')">⚡ Electrician</button></div>
+                <div class="col-md-4 mb-4 reveal delay-4"><button class="btn btn-primary w-100" onclick="showServiceDetails('Plumber')">🔧 Plumber</button></div>
+                <div class="col-md-4 mb-4 reveal delay-5"><button class="btn btn-primary w-100" onclick="showServiceDetails('Mason')">🧱 Mason</button></div>
+                <div class="col-md-4 mb-4 reveal delay-6"><button class="btn btn-primary w-100" onclick="showServiceDetails('Housekeeper')">🏠 Housekeeper</button></div>
+                <div class="col-md-4 mb-4 reveal delay-1"><button class="btn btn-primary w-100" onclick="showServiceDetails('Cook')">👨‍🍳 Cook</button></div>
+                <div class="col-md-4 mb-4 reveal delay-2"><button class="btn btn-primary w-100" onclick="showServiceDetails('Agricultural Labour')">🌾 Agricultural Labour</button></div>
+                <div class="col-md-4 mb-4 reveal delay-3"><button class="btn btn-primary w-100" onclick="showServiceDetails('Driver')">🚗 Driver</button></div>
             </div>
         </div>
     </section>
-    
 
-    <footer class="text-white text-center py-3 bg-dark">
+    <footer class="text-white text-center py-4">
         <p>&copy; 2025 WorkersHire. All Rights Reserved.</p>
     </footer>
 
-    <!-- <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Login</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <input type="email" id="loginUsername" class="form-control mb-3" placeholder="Email">
-                    <input type="password" id="loginPassword" class="form-control mb-3" placeholder="Password">
-                    <button id="loginButton" class="btn btn-primary w-100">Login</button>
-                </div>
-            </div>
-        </div>
-    </div> -->
-   
-    
-    
-    
-
-    <!-- <div class="modal fade" id="signupModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Sign Up</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <input type="text" id="signupFullName" class="form-control mb-3" placeholder="Full Name">
-                    <input type="contact" id="contact" class="form-control mb-3" placeholder="Contact No.">
-                    <input type="email" id="signupEmail" class="form-control mb-3" placeholder="Email">
-                    <input type="password" id="signupPassword" class="form-control mb-3" placeholder="Password">
-                    <button id="signupButton" class="btn btn-success w-100">Sign Up</button>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    
     <!-- Service Details Modal -->
-<div class="modal fade" id="serviceModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="serviceTitle">Service Name</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body" id="serviceDescription">
-                <!-- Description will be dynamically inserted here -->
-                 
-
+    <div class="modal fade" id="serviceModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="serviceTitle">Service Name</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="serviceDescription">
+                    <!-- Description will be dynamically inserted here -->
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-     <script src="./script.js"></script>
-
+    <script src="./script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-
-
     <script src="auth.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Scroll reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
