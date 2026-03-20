@@ -4,184 +4,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WorkersHire - Services</title>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/frontend/style1.css">
-    
-    
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f4f4f4;
-        }
-        .hero {
-            background: url('./images/bg.png') no-repeat center center/cover;
-            height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
-            position: relative;
-        }
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-        }
-        .hero .container {
-            position: relative;
-            z-index: 2;
-        }
-        .service-card {
-            border-radius: 15px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-            padding: 20px;
-            transition: 0.3s;
-            background: white;
-            text-align: center;
-        }
-        .service-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
-        }
-        .service-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        .service-card h3 {
-            margin-top: 15px;
-            font-size: 1.5rem;
-        }
-    </style>
+    <link rel="stylesheet" href="style1.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow">
         <div class="container">
-            <a class="navbar-brand" href="#"><h2>WorkersHire</h2></a>
+            <a class="navbar-brand" href="index.html"><h2>WorkersHire</h2></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+                    <li class="nav-item ms-2">
+                        <button id="logoutBtn" class="btn btn-secondary btn-sm">Logout</button>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="hero services-hero text-center" 
-    style="background: url('/images/Service_Background.png') no-repeat center center; 
-           background-size: cover; 
-           width: 100%;
-           height: 50vh; 
-           color: #fff; 
-           padding: 100px 0; 
-           text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7); 
-           position: relative; 
-           opacity:0.9;
-           overflow: hidden;">
-        
-    <div class="container">
-        <h1>Our Services</h1>
-        <p>Find skilled workers for all your needs</p>
-    </div>
-    </header>
-    <section id="services" class="py-5">
+    <header class="hero hero-sm text-center"
+        style="background: url('/images/Service_Background.png') no-repeat center center/cover;">
         <div class="container">
+            <h1 class="animate-fade-down">Our Services</h1>
+            <p class="animate-fade-up delay-2">Find skilled professionals for all your needs</p>
+        </div>
+    </header>
+
+    <section id="services" class="py-5" style="background: var(--bg-light);">
+        <div class="container">
+            <div class="text-center mb-5 reveal">
+                <h2 class="section-title">Browse All Services</h2>
+                <p class="section-subtitle">Tap a card to explore and book skilled professionals near you</p>
+            </div>
             <div class="row">
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4 reveal delay-1">
                     <div class="service-card">
-                        <img src="../images/painter.png" alt="Painter" width="400" height="300" style="object-fit: cover; border-radius: 10px;">
-                        <h3>Painter</h3>
-                        <p>Professional painting services for homes and businesses.</p>
-                        <a href="painter.html" class="btn btn-primary">Explore</a>
+                        <img src="../images/painter.png" alt="Painter">
+                        <div class="p-3">
+                            <h3>Painter</h3>
+                            <p class="text-muted">Professional painting services for homes and businesses.</p>
+                            <a href="painter.html" class="btn btn-primary w-100">Explore</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4 reveal delay-2">
                     <div class="service-card">
-                        <img src="../images/carpenter.png" alt="Carpainter" width="400" height="300" style="object-fit: cover; border-radius: 10px;">
-                        <h3>Carpenter</h3>
-                        <p>Skilled carpenters for furniture, doors, and renovations.</p>
-                        <a href="carpenter.html" class="btn btn-primary">Explore</a>
+                        <img src="../images/carpenter.png" alt="Carpenter">
+                        <div class="p-3">
+                            <h3>Carpenter</h3>
+                            <p class="text-muted">Skilled carpenters for furniture, doors, and renovations.</p>
+                            <a href="carpenter.html" class="btn btn-primary w-100">Explore</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4 reveal delay-3">
                     <div class="service-card">
-                        <img src="../images/electrician.png" alt="Electrician" width="400" height="300" style="object-fit: cover; border-radius: 10px;">
-                        <h3>Electrician</h3>
-                        <p>Reliable electrical services for all types <br> of projects.</p>
-                        <a href="electrician.html" class="btn btn-primary">Explore</a>
+                        <img src="../images/electrician.png" alt="Electrician">
+                        <div class="p-3">
+                            <h3>Electrician</h3>
+                            <p class="text-muted">Reliable electrical services for all types of projects.</p>
+                            <a href="electrician.html" class="btn btn-primary w-100">Explore</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4 reveal delay-4">
                     <div class="service-card">
-                        <img src="../images/plumber.png" alt="Plumber" width="400" height="300" style="object-fit: cover; border-radius: 10px;">
-                        <h3>Plumber</h3>
-                        <p>Expert plumbing solutions for homes and offices available nationwide.</p>
-                        <a href="plumber.html" class="btn btn-primary">Explore</a>
+                        <img src="../images/plumber.png" alt="Plumber">
+                        <div class="p-3">
+                            <h3>Plumber</h3>
+                            <p class="text-muted">Expert plumbing solutions for homes and offices.</p>
+                            <a href="plumber.html" class="btn btn-primary w-100">Explore</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4 reveal delay-5">
                     <div class="service-card">
-                        <img src="../images/mason.png" alt="Mason" width="400" height="300" style="object-fit: cover; border-radius: 10px;">
-                        <h3>Mason</h3>
-                        <p>Experienced masons for quality construction and reliable repairs.</p>
-                        <a href="mason.html" class="btn btn-primary">Explore</a>
+                        <img src="../images/mason.png" alt="Mason">
+                        <div class="p-3">
+                            <h3>Mason</h3>
+                            <p class="text-muted">Experienced masons for quality construction and repairs.</p>
+                            <a href="mason.html" class="btn btn-primary w-100">Explore</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4 reveal delay-6">
                     <div class="service-card">
-                        <img src="../images/housekeeper.png" alt="Housekeeper" width="400" height="300" style="object-fit: cover; border-radius: 10px;">
-                        <h3>Housekeeper</h3>
-                        <p>Trained housekeeping staff for residential and commercial needs.</p>
-                        <a href="housekeeper.html" class="btn btn-primary">Explore</a>
+                        <img src="../images/housekeeper.png" alt="Housekeeper">
+                        <div class="p-3">
+                            <h3>Housekeeper</h3>
+                            <p class="text-muted">Trained housekeeping staff for residential and commercial needs.</p>
+                            <a href="housekeeper.html" class="btn btn-primary w-100">Explore</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4 reveal delay-1">
                     <div class="service-card">
-                        <img src="../images/cook.png" alt="Cook" width="400" height="300" style="object-fit: cover; border-radius: 10px;">
-                        <h3>Cook</h3>
-                        <p>Professional cooks for homes, events, and businesses.</p>
-                        <a href="cook.html" class="btn btn-primary">Explore</a>
+                        <img src="../images/cook.png" alt="Cook">
+                        <div class="p-3">
+                            <h3>Cook</h3>
+                            <p class="text-muted">Professional cooks for homes, events, and businesses.</p>
+                            <a href="cook.html" class="btn btn-primary w-100">Explore</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4 reveal delay-2">
                     <div class="service-card">
-                        <img src="../images/agri_labour.png" alt="Agri_Labour" width="400" height="300" style="object-fit: cover; border-radius: 10px;">
-                        <h3>Agricultural Labour</h3>
-                        <p>Experienced workers for farming and agriculture-related tasks.</p>
-                        <a href="agri_labour.html" class="btn btn-primary">Explore</a>
+                        <img src="../images/agri_labour.png" alt="Agricultural Labour">
+                        <div class="p-3">
+                            <h3>Agricultural Labour</h3>
+                            <p class="text-muted">Experienced workers for farming and agriculture-related tasks.</p>
+                            <a href="agri_labour.html" class="btn btn-primary w-100">Explore</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4 reveal delay-3">
                     <div class="service-card">
-                        <img src="../images/driver.png" alt="Painter" width="400" height="300" style="object-fit: cover; border-radius: 10px;">
-                        <h3>Driver</h3>
-                        <p>Trained drivers for personal and commercial vehicles.</p>
-                        <a href="driver.html" class="btn btn-primary">Explore</a>
+                        <img src="../images/driver.png" alt="Driver">
+                        <div class="p-3">
+                            <h3>Driver</h3>
+                            <p class="text-muted">Trained drivers for personal and commercial vehicles.</p>
+                            <a href="driver.html" class="btn btn-primary w-100">Explore</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
-    <script src="nearby-workers.js"></script>
 
+    <footer class="text-white text-center py-4">
+        <p>&copy; 2025 WorkersHire. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.getElementById('logoutBtn').addEventListener('click', () => {
-            localStorage.removeItem('role');  // Clear the role
-            window.location.href = "index.html";  // Redirect to home
+            localStorage.removeItem('role');
+            window.location.href = "index.html";
         });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Scroll reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('revealed');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 </body>
 </html>
